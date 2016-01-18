@@ -44,6 +44,8 @@ p strong {
 body input:focus:required:invalid,
 body textarea:focus:required:invalid {
   color: red;
+  box-shadow: #9B1818 0 0 0 2px;
+  border-color: #9B1818;
 }
 
 body input:required:valid,
@@ -276,4 +278,65 @@ a.button {
 }
 .profi_right p {
   margin-top: 5px;
+}
+
+form {
+  background-color: #F7F7F7;
+  padding: 25px 30px;
+  border: #67bc5c 5px solid;
+  border-radius: 5px;
+}
+form h2 {
+  text-transform: uppercase;
+  margin-top: 0;
+  font-family: "RobotoBold", sans-serif;
+  font-size: 22px;
+  color: #333;
+  line-height: 22px;
+  margin-bottom: 30px;
+}
+form label {
+  display: block;
+  margin-bottom: 15px;
+  color: #666;
+  font-size: 14px;
+}
+form input,
+form select {
+  display: block;
+  height: 40px;
+  border: #D9D9D9 1px solid;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.06) inset;
+  width: 100%;
+  text-indent: 10px;
+  font-size: 18px;
+  margin-top: 3px;
+}
+form input:focus,
+form select:focus {
+  box-shadow: #67bc5c 0 0 0 2px;
+  outline: none;
+  border-radius: 1px;
+  border-color: #67bc5c;
+}
+form .button_wrap {
+  text-align: center;
+  margin: 30px 0 10px;
+}
+
+select {
+  background-image: url("../img/arrow.svg");
+  background-position: right center;
+  background-repeat: no-repeat;
+  -webkit-appearance: none;
+  -webkit-appearance-appearance: none;
+}
+
+.s_review {
+  background-image: url("../img/middle_bg.jpg");
+  background-repeat: repeat-x;
+  background-attachment: fixed;
+  min-height: 500px;
+  background-position: top center;
+  background-size: cover;
 }

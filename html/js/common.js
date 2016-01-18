@@ -1,5 +1,10 @@
 $(document).ready(function() {
 
+	$.stellar({
+		responsive: true,
+		horizontalOffset: 60
+	});
+
 	function wResize() {
 		$('header').css('min-height', $(window).height());
 	};
