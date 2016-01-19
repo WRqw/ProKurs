@@ -1,9 +1,24 @@
 $(document).ready(function() {
 
+	$('.popup').magnificPopup({type:'image'});
+
 	$.stellar({
 		responsive: true,
 		horizontalOffset: 60
 	});
+
+	  $(".carousel").owlCarousel({
+	  	loop : true,
+	  	responsive : {
+	  		0 : {
+        		items : 1,
+            	nav : true
+	  			}
+	  		},
+	  		navText : ''
+	  });
+
+
 
 	function wResize() {
 		$('header').css('min-height', $(window).height());
