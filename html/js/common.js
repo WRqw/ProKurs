@@ -1,6 +1,9 @@
 $(document).ready(function() {
 
+	
+
 	$('.popup').magnificPopup({type:'image'});
+	$('.popup_c').magnificPopup({});
 
 	$.stellar({
 		responsive: true,
@@ -34,10 +37,20 @@ $(document).ready(function() {
 	$(".top_phone .tab_item").hide().eq($(this).index()).fadeIn()
 	}).eq(0).addClass("active");
 
+	$(".bottom_phone .wrapper .tab").click(function() {
+	$(".bottom_phone .wrapper .tab").removeClass("active").eq($(this).index()).addClass("active");
+	$(".bottom_phone .tab_item").hide().eq($(this).index()).fadeIn()
+	}).eq(0).addClass("active");
+
 
 	$(".tabs_header .wrapper .tab").click(function() {
 	$(".tabs_header .wrapper .tab").removeClass("active").eq($(this).index()).addClass("active");
 	$(".tabs_header .tab_item").hide().eq($(this).index()).fadeIn()
+	}).eq(0).addClass("active");
+
+	$(".contacts_top .tab").click(function() {
+		$(".contacts_top .tab").removeClass("active").eq($(this).index()).addClass("active");
+		$(".s_contacts .tab_item").hide().eq($(this).index()).fadeIn()
 	}).eq(0).addClass("active");
 
 	//Цели для Яндекс.Метрики и Google Analytics
@@ -56,7 +69,7 @@ $(document).ready(function() {
 
 	//Аякс отправка форм
 	//Документация: http://api.jquery.com/jquery.ajax/
-	$("#form").submit(function(e) {
+	$("form").submit(function(e) {
 		e.preventDefault;
 		$.ajax({
 			type: "POST",
@@ -65,9 +78,19 @@ $(document).ready(function() {
 		}).done(function() {
 			alert("Спасибо за заявку!");
 			setTimeout(function() {
-				$.fancybox.close();
+				var magnificPopup = $.magnificPopup.instance; 
+				magnificPopup.close(); 
 			}, 1000);
 		});
 	});
 	
+});
+
+$(window).load(function() {
+	$(".top_header").animated("pulse", "pulse");
+	$(".tabs_header .wrapper").animated("flipInY", "flipInY");
+	$(".profi_item").animated("fadeInRight", "fadeOut");
+	$(".s_profi form").animated("zoomInRight", "fadeOut");
+	$(".s_back h3").animated("fadeInUp", "fadeOut");
+	$("footer").animated("slideInUp", "fadeOut");
 });

@@ -40,13 +40,18 @@
 	.top_phone .tab_item {
 		font-size: 30px;
 	}
+	.s_contacts h2 {
+		margin-bottom: 20px;
+	}
+	
+	}
 }
 
 @media only screen and (max-width : 600px) {
 	.profi_item {
 		width: 100%;
 		text-align: center;
-		margin-bottom: 20px;
+		margin-bottom: 25px;
 	}
 }
 
@@ -72,6 +77,17 @@
 	}
 	form .button {
 		font-size: 15px;
+	}
+	.s_contacts .tabs .tab {
+		padding: 0 18px
+	}
+	.s_contacts .tabs {
+		margin-left: 0;
+	}
+	.profi_item {
+		width: 100%;
+		text-align: center;
+		margin-bottom: 20px;
 	}
 	
 	

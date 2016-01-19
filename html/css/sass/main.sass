@@ -16,6 +16,7 @@ body
 	position: relative
 	line-height: 1.6
 	-webkit-font-smoothing: antialised
+	overflow-x: hidden
 
 
 h1
@@ -26,7 +27,8 @@ h1
 	font-family: "CleanvertisingLight", sans-serif
 	margin: 0
 
-section
+section,
+footer
 	padding: 58px 0 68px
 	h2 
 		color: $blue-color
@@ -70,7 +72,11 @@ header
 	font-size: 40px
 	font-family: 'RobotoBold', sans-serif
 	font-weight: bold
-.top_phone 
+.top_phone,
+.bottom_phone
+	.tab
+	cursor pointer 
+.top_phone	
 	text-align: right
 
 .tab_item 
@@ -78,14 +84,20 @@ header
 .tab_item:first-child
 	display: block		
 
-.top_phone .wrapper .tab 
-	text-transform: uppercase
-	cursor: pointer
-.top_phone .wrapper .active
-	text-decoration: underline	
-.top_phone .tab_item
-	font-size: 34px
-	font-family: 'RobotoBold', sans-serif	 		
+.top_phone,
+.bottom_phone 
+	.wrapper .tab 
+		text-transform: uppercase
+		cursor: pointer
+.top_phone,
+.bottom_phone
+	.wrapper .active
+		text-decoration: underline	
+.top_phone,
+.bottom_phone 
+	.tab_item
+		font-size: 34px
+		font-family: 'RobotoBold', sans-serif	 		
 
 .top_header
 	margin-top: 70px
@@ -349,3 +361,81 @@ select
 		&.active
 			opacity: .8
 
+.s_back
+	background-image: url("../img/red_bg.jpg")
+	background-position: top center
+	text-align: center
+	padding: 40px 0
+	h3
+		font-family: 'RobotoRegular', sans-serif
+		font-size: 26px
+		text-align: center
+		margin-top: 0
+		text-transform: uppercase
+		font-weight: normal
+		background-color: rgba(255,255,255,.13)
+		padding: 10px 0
+	.button
+		margin: auto	
+
+.s_contacts
+	padding-bottom: 0
+	.wrapper
+		margin-top: 20px
+		font-size: 18px
+	.contacts_top
+	text-align: center
+	h2 
+		color: #000
+		display: inline-block	
+		vertical-align: middle
+		margin-bottom: 0
+		height: 45px
+		line-height: 45px
+	.tabs	
+		display: inline-block	
+		vertical-align: middle
+		height: 45px
+		line-height: 45px
+		margin-left: 20px
+		.tab
+			float: left
+			padding: 0 60px
+			border: $red-color 5px solid
+			line-height: 38px
+			color: $red-color
+			&:first-child
+				border-radius: 3px 0 0 3px
+			&:last-child
+				border-radius: 0 3px 3px 0	
+			&.active
+				background-color: $red-color
+				color: #fff	
+.map 
+	margin-top: 20px
+	min-height: 480px
+	background-color: #e1d6b0				
+
+footer
+	text-align: center
+	h2
+		color: #000
+		margin-bottom: 30px
+	p 
+		font-size: 18px
+		margin-top: 0	
+	.top_phone
+		text-align: center	
+	.bottom_phone
+		margin-top: 50px
+		color: $red-color
+	.button
+		margin-top: 30px	
+#hidden_form
+	max-width: 420px	
+	margin: auto
+	position: relative
+	padding-top: 20px
+	h2
+		text-align: center
+		font-weight: normal	
